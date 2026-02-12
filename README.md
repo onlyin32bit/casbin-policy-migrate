@@ -17,7 +17,7 @@ A migration system for managing Casbin policies with version control, similar to
 ### CLI Tool
 
 ```bash
-go install github.com/onlyin32bit/casbin-policy-migrate/cli@latest
+go install github.com/onlyin32bit/casbin-policy-migrate/cli/casbin-migrate@latest
 ```
 
 ### Package
@@ -48,7 +48,15 @@ casbin/
 casbin-migrate new add_admin_policies
 ```
 
-This creates a timestamped migration file: `casbin/policy_migrations/20260212120000_add_admin_policies.csv`
+This creates a timestamped migration file: `./casbin/policy_migrations/20260212120000_add_admin_policies.csv`
+
+Alternatively, create a sequential migration with the `--sequential` flag:
+
+```bash
+casbin-migrate new add_admin_policies --sequential
+```
+
+This creates: `./casbin/policy_migrations/0001_add_admin_policies.csv`
 
 ### 3. Edit the Migration File
 
@@ -126,6 +134,26 @@ Create a new migration file:
 
 ```bash
 casbin-migrate new add_user_permissions
+```
+
+**Flags:**
+
+- `--sequential` - Use sequential numbering (0001, 0002, etc) instead of timestamp prefix
+- `--migration-dir` - Specify custom migration directory (default: `./casbin/policy_migrations`)
+
+**Examples:**
+
+```bash
+# Create timestamped migration (default)
+casbin-migrate new add_user_permissions
+# Creates: 20260212120000_add_user_permissions.csv
+
+# Create sequential migration
+casbin-migrate new add_user_permissions --sequential
+# Creates: 0005_add_user_permissions.csv
+
+# Use custom migration directory
+casbin-migrate new add_user_permissions --migration-dir "./migrations"
 ```
 
 ### `up`

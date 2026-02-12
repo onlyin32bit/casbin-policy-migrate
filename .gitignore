@@ -28,10 +28,6 @@ go.work
 .DS_Store
 Thumbs.db
 
-# Build artifacts
-casbin-migrate
-casbin-migrate.exe
-
 # Temporary files
 tmp/
 temp/
