@@ -1,5 +1,8 @@
 # Casbin Policy Migrate
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/onlyin32bit/casbin-policy-migrate)](https://goreportcard.com/report/github.com/onlyin32bit/casbin-policy-migrate)
+[![Godoc](https://godoc.org/github.com/onlyin32bit/casbin-policy-migrate?status.svg)](https://godoc.org/github.com/onlyin32bit/casbin-policy-migrate)
+
 A migration system for managing Casbin policies with version control, similar to database migrations.
 
 ## Features
