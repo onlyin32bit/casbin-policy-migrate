@@ -286,47 +286,6 @@ func (a *MyAdapter) AddPolicy(ctx context.Context, sec string, ptype string, rul
 // Implement other methods...
 ```
 
-## Project Structure
-
-```txt
-.
-├── adapter/
-│   └── pgx/              # PostgreSQL adapter using pgx
-├── cli/
-│   ├── cmd/              # CLI commands
-│   └── main.go           # CLI entry point
-├── example/              # Example usage
-│   ├── casbin/
-│   │   ├── model.conf
-│   │   └── policy_migrations/
-│   │       ├── 0001_init.csv
-│   │       ├── 0002_auth_sessions.csv
-│   │       ├── 0003_root_user.csv
-│   │       └── 0004_system_root_fix.csv
-│   └── main.go
-├── pkg/
-│   └── migration/        # Core migration logic
-│       ├── adapter.go    # Adapter interface
-│       ├── migrator.go   # Migration engine
-│       ├── parser.go     # CSV parser
-│       └── types.go      # Type definitions
-└── README.md
-```
-
-## Testing
-
-Run tests:
-
-```bash
-go test ./...
-```
-
-Run tests with coverage:
-
-```bash
-go test -cover ./...
-```
-
 ## License
 
 MIT
