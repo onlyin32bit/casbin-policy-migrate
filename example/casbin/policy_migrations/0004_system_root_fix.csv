@@ -1,0 +1,2 @@
+p, system:root, user:*, edit
+-p, system:root, user:*, delete
